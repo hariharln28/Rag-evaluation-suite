@@ -1,0 +1,32 @@
+question_id,question,gold_answer,expected_passage_id,retrieved_passage_ids,retrieval_correct,generation_correct
+1,What is the capital of France?,paris,1.0,1,False,True
+2,When was Python first released?,1991,2.0,1,False,True
+3,How long is the Great Wall of China?,"over 13,000 miles",3.0,1,False,True
+4,What process converts light energy into chemical energy in plants?,photosynthesis,4.0,1,False,True
+5,What is the highest mountain above sea level?,mount everest,5.0,1,False,True
+6,Who developed the theory of relativity?,albert einstein,6.0,1,False,True
+7,When did World War II end?,1945,7.0,1,False,True
+8,What organelle is the powerhouse of the cell?,mitochondria,8.0,1,False,True
+9,Where is the Amazon rainforest located?,south america,9.0,1,False,True
+10,Who wrote Hamlet?,shakespeare,10.0,1,False,True
+11,What is the primary language used for web development?,javascript,,1,False,False
+12,What is the capital of Spain?,madrid,,1,False,False
+13,How many continents are there?,seven,,1,False,False
+14,What gas do plants absorb from the atmosphere?,carbon dioxide,4.0,1,False,False
+15,Which planet is known as the Red Planet?,mars,,1,False,False
+16,What is the speed of light?,"approximately 299,792 km/s",,1,False,False
+17,Who painted the Mona Lisa?,leonardo da vinci,,1,False,False
+18,What is the chemical symbol for gold?,au,,1,False,False
+19,Which organ filters blood in the human body?,kidney,,1,False,False
+20,What is the largest ocean on Earth?,pacific ocean,,1,False,False
+21,In which city is the Statue of Liberty located?,new york,,1,False,False
+22,What year did the Berlin Wall fall?,1989,,1,False,False
+23,What is the hardest natural substance?,diamond,,1,False,False
+24,Who is known as the father of computers?,charles babbage,,1,False,False
+25,What is the chemical formula for water?,h2o,,1,False,False
+26,What is the main ingredient in guacamole?,avocado,,1,False,False
+27,Which sport uses a shuttlecock?,badminton,,1,False,False
+28,Which element has atomic number 1?,hydrogen,,1,False,False
+29,What is the fastest land animal?,cheetah,,1,False,False
+30,What currency is used in Japan?,yen,,1,False,False
+31,What is the capital of Atlantis?,,,1,True,False

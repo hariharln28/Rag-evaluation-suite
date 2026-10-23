@@ -1,0 +1,6 @@
+# requirements.txt
+rank-bm25
+pandas
+tqdm
+tabulate
+sentence-transformers

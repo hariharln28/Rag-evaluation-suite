@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RAG Evaluation Report</title>
+<style>
+  body {font-family: Arial, sans-serif; margin: 2rem;}
+  h1, h2 {color: #2c3e50;}
+  table {border-collapse: collapse; width: 100%; margin-top: 1rem;}
+  th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
+  th {background-color: #f2f2f2;}
+  .correct {color: green; font-weight: bold;}
+  .incorrect {color: red; font-weight: bold;}
+</style>
+</head>
+<body>
+<h1>RAG Evaluation Report</h1>
+<h2>Summary</h2>
+<ul>
+  <li>Total questions: 31</li>
+  <li>Retrieval accuracy (top 5): 3.23% (1/31)</li>
+  <li>Generation accuracy: 32.26% (10/31)</li>
+</ul>
+<h2>Detailed Results (first 20 questions)</h2>
+<table>
+  <thead>
+    <tr>
+      <th>question_id</th>
+      <th>question</th>
+      <th>gold_answer</th>
+      <th>expected_passage_id</th>
+      <th>retrieved_passage_ids</th>
+      <th>retrieval_correct</th>
+      <th>generation_correct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>What is the capital of France?</td>
+      <td>paris</td>
+      <td>1</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>When was Python first released?</td>
+      <td>1991</td>
+      <td>2</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>How long is the Great Wall of China?</td>
+      <td>over 13,000 miles</td>
+      <td>3</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>What process converts light energy into chemical energy in plants?</td>
+      <td>photosynthesis</td>
+      <td>4</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>What is the highest mountain above sea level?</td>
+      <td>mount everest</td>
+      <td>5</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Who developed the theory of relativity?</td>
+      <td>albert einstein</td>
+      <td>6</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>When did World War II end?</td>
+      <td>1945</td>
+      <td>7</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>What organelle is the powerhouse of the cell?</td>
+      <td>mitochondria</td>
+      <td>8</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Where is the Amazon rainforest located?</td>
+      <td>south america</td>
+      <td>9</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Who wrote Hamlet?</td>
+      <td>shakespeare</td>
+      <td>10</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="correct">True</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>What is the primary language used for web development?</td>
+      <td>javascript</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>What is the capital of Spain?</td>
+      <td>madrid</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>How many continents are there?</td>
+      <td>seven</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>What gas do plants absorb from the atmosphere?</td>
+      <td>carbon dioxide</td>
+      <td>4</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Which planet is known as the Red Planet?</td>
+      <td>mars</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>What is the speed of light?</td>
+      <td>approximately 299,792 km/s</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Who painted the Mona Lisa?</td>
+      <td>leonardo da vinci</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>What is the chemical symbol for gold?</td>
+      <td>au</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Which organ filters blood in the human body?</td>
+      <td>kidney</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>What is the largest ocean on Earth?</td>
+      <td>pacific ocean</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td class="incorrect">False</td>
+      <td class="incorrect">False</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Interpretation</h2>
+<p>The retrieval component performed poorly: only <strong>1 out of 31</strong> queries retrieved the correct passage within the top‑5 results (<em>3.23%</em>). This indicates that the BM25 index, as currently built, is not distinguishing the relevant passages. Possible causes include:</p>
+<ul>
+  <li>All passages are extremely short and share many common tokens, limiting BM25 discriminative power.</li>
+  <li>Passage IDs are not being used as part of the document text, so the model cannot learn the association between a question and its numbered passage.</li>
+  <li>Only a single tokenization strategy (simple word split) is used; more sophisticated preprocessing (stop‑word removal, stemming, n‑grams) might help.</li>
+</ul>
+<p>Generation accuracy is higher (<strong>32.26%</strong>) because many of the gold answers appear as substrings in the first retrieved passage (which is always passage 1 due to the current scoring). For questions that happen to match content in passage 1, the generation check passes, otherwise it fails.</p>
+<p>To improve the system:</p>
+<ol>
+  <li><strong>Enrich the corpus:</strong> provide longer, more distinctive passages or add multiple variants per fact.</li>
+  <li><strong>Improve indexing:</strong> enable BM25 n‑gram weighting, remove stop words, or switch to a dense retriever (e.g., Sentence‑Transformers).</li>
+  <li><strong>Tie questions to passage IDs:</strong> include the ID in the text or store a separate mapping that can be used to boost the expected passage during retrieval.</li>
+  <li><strong>Add a fallback for unanswerable questions:</strong> currently the unanswerable case is not distinguished; a confidence threshold could be used to return "no answer".</li>
+</ol>
+<p>With these changes, we would expect retrieval accuracy to rise, which in turn should boost overall generation performance.</p>
+</body>
+</html>
