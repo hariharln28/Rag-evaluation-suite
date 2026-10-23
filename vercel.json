@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "public": true,
+
   "builds": [
     { "src": "evaluation/**", "use": "@vercel/static" }
   ],
